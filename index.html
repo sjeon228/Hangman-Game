@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<HTML lang="en-us">
+	<HEAD>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<Title>Hangman Game</Title>
+	</HEAD>
+
+	<!--
+	Computer selects random word and displays the correct number of blanks for each letter of word
+	 User inputs a letter to try to guess the word
+	Computer records the letter
+	computer sees if the letter is in the word
+	If letter is found in the word, the letter is replaces the correct blank space of the word
+	If letter is not found in the word, the letter is displayed in the wrongly guessed section
+	The number of guesses goes down by 1
+	If user guesses all the letters correctly, the number of wins goes up by 1
+	New word is chosen and user can begin to guess again. -->
+
+	<BODY>
+		<div class="container">
+			<div class="header">
+				<h1>Hangman</h1>
+				<h2>Game of Thrones Version</h2>
+
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="http://placehold.it/150x150" alt="Placeholder" class="img-thumbnail">
+				</div>
+
+				<div class="col-md-6">
+					<div class="row">
+						<p>Press Any Key To Get Started!</p>
+
+						<p>Wins</p>
+
+						<p id="currentWord">Current Word:</p>
+
+
+					</div>
+
+					<div class="row">
+						<p>Number of Guesses Remaining</p>
+
+						<p>Letters Already Guessed</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="assets/javascript/game.js"></script>
+	</BODY>
+</HTML>
