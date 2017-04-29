@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<Title>Hangman Game</Title>
 	</HEAD>
 
@@ -35,19 +36,25 @@
 
 				<div class="col-md-6">
 					<div class="row">
-						<p>Press Any Key To Get Started!</p>
+						<p>Click the Start button!</p>
+						<button type="button" class="btn btn-primary" onclick="startGame()">START</button>
 
 						<p>Wins</p>
+						<div id = "wins"></div>
 
 						<p id="currentWord">Current Word:</p>
+
+						<div id="blanks"></div>
 
 
 					</div>
 
 					<div class="row">
 						<p>Number of Guesses Remaining</p>
+						<div id = "guessNumber"></div>
 
 						<p>Letters Already Guessed</p>
+						<div id="guessed"></div>
 					</div>
 				</div>
 			</div>
