@@ -3,7 +3,10 @@
 	<HEAD>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<Title>Hangman Game</Title>
 	</HEAD>
@@ -20,42 +23,40 @@
 	New word is chosen and user can begin to guess again. -->
 
 	<BODY>
+
+	<audio autoplay="autoplay" loop="loop"><source src="background.mp3" type="audio/mpeg" /></audio>
 		<div class="container">
-			<div class="header">
+			<div class="header Hangman">
 				<h1>Hangman</h1>
 				<h2>Game of Thrones Version</h2>
 
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container body">
 			<div class="row">
-				<div class="col-md-6">
-					<img src="http://placehold.it/150x150" alt="Placeholder" class="img-thumbnail">
+				<div class="image">
+					<img id = "mainImage" src="http://static.srcdn.com/wp-content/uploads/game-of-thrones-the-iron-throne.jpg" alt="throne" width = "50%"" height = "50%"" class="img-thumbnail throne">
 				</div>
+			</div>
 
-				<div class="col-md-6">
-					<div class="row">
-						<p>Click the Start button!</p>
-						<button type="button" class="btn btn-primary" onclick="startGame()">START</button>
+			<div class="row">
+				<div class = "Main">
+					<p>Guess any letter to begin!</p>
+					
 
-						<p>Wins</p>
-						<div id = "wins"></div>
+					<p>Wins</p>
+					<div id = "wins"></div>
 
-						<p id="currentWord">Current Word:</p>
+					<p id="currentWord">Current Word:</p>
 
-						<div id="blanks"></div>
+					<div id="blanks"></div>
+			
+					<p>Number of Guesses Remaining</p>
+					<div id = "guessNumber"></div>
 
-
-					</div>
-
-					<div class="row">
-						<p>Number of Guesses Remaining</p>
-						<div id = "guessNumber"></div>
-
-						<p>Letters Already Guessed</p>
-						<div id="guessed"></div>
-					</div>
+					<p>Letters Already Guessed</p>
+					<div id="guessed"></div>
 				</div>
 			</div>
 		</div>
